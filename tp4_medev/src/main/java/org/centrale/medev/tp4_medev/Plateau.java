@@ -18,7 +18,34 @@ public class Plateau {
     public Plateau(Pion[][] contenu) {
         this.contenu = contenu;
     }
-    
-    
-    
+
+    public void affiche(){
+        for (int column=0;column<10;column++){
+            for (int line=0;line<10;line++){
+                Pion pion = contenu[line][column];
+                if (pion !=null){
+                    int valeur=0;
+                    if (pion instanceof Dame){
+                        valeur+=1;
+                    }
+                    if (pion.getCouleur()==pion.NOIR){
+                        valeur+=2;
+                    }
+                    switch (valeur){
+                        case 0:
+                            System.out.println('\u26C0');
+                        case 1:
+                            System.out.println('\u26C1');
+                        case 2:
+                            System.out.println('\u26C2');
+                        case 3:
+                            System.out.println('\u26C3');
+                    }
+
+                }else{
+                    System.out.print(' ');
+                }
+            }
+        }
+    }
 }
