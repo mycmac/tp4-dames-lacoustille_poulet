@@ -10,5 +10,15 @@ package org.centrale.medev.tp4_medev;
  */
 public class Plateau {
     private Pion[][] contenu;
+
+    public Pion[][] getContenu() {
+        return contenu;
+    }
+
+    public Plateau(Pion[][] contenu) {
+        this.contenu = contenu;
+    }
+    
+    
     
 }
