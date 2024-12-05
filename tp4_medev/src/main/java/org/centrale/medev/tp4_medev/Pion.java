@@ -11,5 +11,6 @@ package org.centrale.medev.tp4_medev;
 public class Pion {
     private Point2D pos;
     private int couleur;
-    
+    public final int NOIR = 0;
+    public final int BLANC = 1;
 }
