@@ -47,6 +47,7 @@ public class Point2D {
      */
     public void setX(int x){
         this.x=x;
+        coordonneeCheck();
     }
 
     /**
@@ -55,6 +56,7 @@ public class Point2D {
      */
     public void setY(int y){
         this.y=y;
+        coordonneeCheck();
     }
     //getters
 
@@ -83,6 +85,7 @@ public class Point2D {
     public void setPosition(int x, int y){
         this.x=x;
         this.y=y;
+        coordonneeCheck();
     }
 
     /**
@@ -93,6 +96,7 @@ public class Point2D {
     public void translate (int dx, int dy){
         this.x+=dx;
         this.y+=dy;
+        coordonneeCheck();
     }
     //getter des deux composantes
 
@@ -113,5 +117,11 @@ public class Point2D {
         double X=(double)this.x-p.x;
         double Y=(double)this.y-p.y;
         return (float)Math.sqrt(X*X+Y*Y);
+    }
+
+    public void coordonneeCheck() throws IndexOutOfBoundsException{
+        if (x<0 ||x>9 || y<0 || y>9){
+            throw new IndexOutOfBoundsException("Position hors de la grille");
+        }
     }
 }
