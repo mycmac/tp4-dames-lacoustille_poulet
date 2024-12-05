@@ -68,5 +68,9 @@ public class Pion {
                 }
         }
     }
-
+    public Pion(Point2D pos, int couleur) {
+        this.pos = pos;
+        this.couleur = couleur;
+    }
+    
 }
