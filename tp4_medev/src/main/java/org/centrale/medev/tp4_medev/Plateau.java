@@ -11,6 +11,14 @@ package org.centrale.medev.tp4_medev;
 public class Plateau {
     private Pion[][] contenu;
 
+    public Pion[][] getContenu() {
+        return contenu;
+    }
+
+    public Plateau(Pion[][] contenu) {
+        this.contenu = contenu;
+    }
+
     public void affiche(){
         for (int column=0;column<10;column++){
             for (int line=0;line<10;line++){
